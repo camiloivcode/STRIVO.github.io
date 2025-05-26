@@ -206,7 +206,11 @@
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/home/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    /* background-image se elimina del CSS para pasarlo al HTML */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -293,15 +297,18 @@
 }
 
 .collection-card:nth-child(1) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./img/home/hero-bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    /* url se elimina del CSS */
 }
 
 .collection-card:nth-child(2) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./img/home/mujer-bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    /* url se elimina del CSS */
 }
 
 .collection-card:nth-child(3) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./img/home/ofertas-bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    /* url se elimina del CSS */
 }
 
 .collection-content {
@@ -326,6 +333,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    /* background-image se elimina del CSS para pasarlo al HTML */
     text-align: center;
     color: #fff;
 }

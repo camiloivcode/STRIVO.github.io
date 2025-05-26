@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>STRIVO</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
 
-    <header class="main-header">
+<header class="main-header">
     <div class="container">
         <nav class="main-nav">
             <!-- Logo más cerca de la esquina -->
             <a href="index.html" class="logo">
-                <img src="/img/home/logo-strivo.png" alt="STRIVO Logo" class="logo-img">
+                <img src="./img/home/logo-strivo.png" alt="STRIVO Logo" class="logo-img" />
             </a>
-            
+
             <!-- Barra de búsqueda -->
             <div class="search-container">
                 <form class="search-form">
-                    <input type="text" placeholder="Buscar productos..." class="search-input">
+                    <input type="text" placeholder="Buscar productos..." class="search-input" />
                     <button type="submit" class="search-button">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
             </div>
-            
+
             <!-- Menú de navegación -->
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
@@ -35,7 +35,7 @@
                 <li><a href="oferta.html">Ofertas</a></li>
                 <li><a href="acerca.html">Nosotros</a></li>
             </ul>
-            
+
             <!-- Iconos de redes sociales y carrito -->
             <div class="nav-icons">
                 <a href="https://instagram.com/tucuenta" target="_blank" class="social-icon">
@@ -52,7 +52,7 @@
                     <span class="cart-count">0</span>
                 </a>
             </div>
-            
+
             <!-- Menú hamburguesa para móvil -->
             <div class="hamburger-menu">
                 <i class="fas fa-bars"></i>
@@ -61,60 +61,64 @@
     </div>
 </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>ESTÁS LISTO PARA BAJAR LAS PISTAS?</h1>
-            <div class="hero-titles">
-                <h2 class="animated-text">STRIVO</h2>
-                <h3 class="animated-text delay-1">Nosotros te abrigamos</h3>
-            </div>
-            <a href="hombre.html" class="cta-button">Explora nuestra colección</a>
+<!-- Hero Section con imagen visible -->
+<section class="hero">
+    <img src="./img/home/hero-bg.jpg" alt="Deportes extremos en clima frío" class="hero-img" />
+    <div class="hero-content">
+        <h1>ESTÁS LISTO PARA BAJAR LAS PISTAS?</h1>
+        <div class="hero-titles">
+            <h2 class="animated-text">STRIVO</h2>
+            <h3 class="animated-text delay-1">Nosotros te abrigamos</h3>
         </div>
-    </section>
+        <a href="hombre.html" class="cta-button">Explora nuestra colección</a>
+    </div>
+</section>
 
-    <!-- Sección de destacados -->
-    <section class="featured">
-        <div class="container">
-            <h2 class="section-title">COLECCIONES DESTACADAS</h2>
-            <div class="collections-grid">
-                <a href="hombre.html" class="collection-card">
-                    <div class="collection-content">
-                        <h3>HOMBRE</h3>
-                        <p>Descubre lo último en moda masculina</p>
-                    </div>
-                </a>
-                <a href="mujer.html" class="collection-card">
-                    <div class="collection-content">
-                        <h3>MUJER</h3>
-                        <p>Estilo único para ella</p>
-                    </div>
-                </a>
-                <a href="oferta.html" class="collection-card">
-                    <div class="collection-content">
-                        <h3>OFERTAS</h3>
-                        <p>Lo mejor a precios especiales</p>
-                    </div>
-                </a>
-            </div>
+<!-- Sección de destacados con imágenes -->
+<section class="featured">
+    <div class="container">
+        <h2 class="section-title">COLECCIONES DESTACADAS</h2>
+        <div class="collections-grid">
+            <a href="hombre.html" class="collection-card">
+                <img src="./img/home/hombre-bg.jpg" alt="Colección Hombre" class="collection-img" />
+                <div class="collection-content">
+                    <h3>HOMBRE</h3>
+                    <p>Descubre lo último en moda masculina</p>
+                </div>
+            </a>
+            <a href="mujer.html" class="collection-card">
+                <img src="./img/home/mujer-bg.jpg" alt="Colección Mujer" class="collection-img" />
+                <div class="collection-content">
+                    <h3>MUJER</h3>
+                    <p>Estilo único para ella</p>
+                </div>
+            </a>
+            <a href="oferta.html" class="collection-card">
+                <img src="/img/collections/oferta.jpg" alt="Colección Ofertas" class="collection-img" />
+                <div class="collection-content">
+                    <h3>OFERTAS</h3>
+                    <p>Lo mejor a precios especiales</p>
+                </div>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Newsletter -->
-    <section class="newsletter" style="background-image: url('./img/home/newsletter-bg.jpg');">
+<!-- Newsletter -->
+<section class="newsletter" style="background-image: url('./img/home/newsletter-bg.jpg');">
     <div class="newsletter-overlay"></div>
     <div class="container">
         <h2>ÚNETE A NUESTRA COMUNIDAD</h2>
         <p>Recibe las últimas noticias y ofertas exclusivas</p>
         <form class="newsletter-form">
-            <input type="email" placeholder="Tu correo electrónico" required>
+            <input type="email" placeholder="Tu correo electrónico" required />
             <button type="submit">Suscribirse</button>
         </form>
     </div>
 </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
+<!-- Footer -->
+<footer class="main-footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-section">
@@ -142,6 +146,6 @@
     </div>
 </footer>
 
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
