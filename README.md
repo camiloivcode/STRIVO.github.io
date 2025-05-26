@@ -1,2 +1,1 @@
-# STRIVO.github.io
-# STRIVO..
+# proyecto-1
