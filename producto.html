@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRIVO | Detalle de Producto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/producto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (igual que en las otras páginas) -->
+    <header class="main-header">
+    <div class="container">
+        <nav class="main-nav">
+            <!-- Logo más cerca de la esquina -->
+            <a href="index.html" class="logo">
+                <img src="/img/home/logo-strivo.png" alt="STRIVO Logo" class="logo-img">
+            </a>
+            
+            <!-- Barra de búsqueda -->
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar productos..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Menú de navegación -->
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="hombre.html">Hombre</a></li>
+                <li><a href="mujer.html">Mujer</a></li>
+                <li><a href="oferta.html">Ofertas</a></li>
+                <li><a href="acerca.html">Nosotros</a></li>
+            </ul>
+            
+            <!-- Iconos de redes sociales y carrito -->
+            <div class="nav-icons">
+                <a href="https://instagram.com/tucuenta" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/tucuenta" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://pinterest.com/tucuenta" target="_blank" class="social-icon">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="carrito.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            
+            <!-- Menú hamburguesa para móvil -->
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- Página de producto -->
+    <main class="product-page">
+        <div class="product-container">
+            <!-- Imagen del producto -->
+            <div class="product-image-container">
+                <img src="/img/hombre/producto2.jpg" alt="Camiseta STRIVO" class="product-image" id="mainProductImage">
+            </div>
+            
+            <!-- Información del producto -->
+            <div class="product-info">
+                <h1 class="product-title">CAMISETA STRIVO</h1>
+                <p class="product-price">$5,000.00</p>
+                
+                <!-- Selector de tallas -->
+                <div class="product-options">
+                    <span class="option-title">TALLA:</span>
+                    <div class="option-group" id="sizeOptions">
+                        <div class="size-option">XS</div>
+                        <div class="size-option">S</div>
+                        <div class="size-option selected">M</div>
+                        <div class="size-option">L</div>
+                        <div class="size-option">XL</div>
+                    </div>
+                    
+                    <!-- Selector de colores -->
+                    <span class="option-title">COLOR:</span>
+                    <div class="option-group" id="colorOptions">
+                        <div class="color-option selected" style="background-color: #000;" data-image="camiseta-negra.jpg"></div>
+                        <div class="color-option" style="background-color: #fff; border: 1px solid #eee;" data-image="camiseta-blanca.jpg"></div>
+                        <div class="color-option" style="background-color: #555;" data-image="camiseta-gris.jpg"></div>
+                        <div class="color-option" style="background-color: #8B0000;" data-image="camiseta-roja.jpg"></div>
+                    </div>
+                </div>
+                
+                <a href="/carrito.html"><button class="add-to-cart">AÑADIR AL CARRITO</button></a>
+                
+                <!-- Descripción del producto -->
+                <div class="product-description">
+                    <h3 class="description-title">DESCRIPCIÓN</h3>
+                    <div class="description-content">
+                        <p>Camiseta premium de algodón orgánico con el logo de STRIVO serigrafiado. Fabricada con materiales de alta calidad para máxima durabilidad y comodidad.</p>
+                        <ul>
+                            <li>100% algodón orgánico</li>
+                            <li>Serigrafía de alta resistencia</li>
+                            <li>Corte clásico</li>
+                            <li>Lavable a máquina</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>STRIVO</h3>
+                <p>Nosotros te abrigamos</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="hombre.html">Hombre</a></li>
+                    <li><a href="mujer.html">Mujer</a></li>
+                    <li><a href="oferta.html">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>info@midominio.com</p>
+                <p>+52-1-33-12345678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 STRIVO, STRIVO Colombia Ltda. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Selección de tallas
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+        
+        // Cambio de color/imagen
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+                
+                // Cambiar imagen del producto
+                const imageName = this.getAttribute('data-image');
+                document.getElementById('mainProductImage').src = `img/productos/hombre/${imageName}`;
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* ===== ESTILOS PARA ACERCA DE NOSOTROS ===== */
+
+.about-page {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    min-height: calc(100vh - 150px);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #f1c40f;
+}
+
+/* Sección de historia */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+.about-content {
+    padding: 20px;
+}
+
+.about-subtitle {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #f1c40f;
+}
+
+.about-text {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Sección de equipo */
+.team-section {
+    margin-top: 80px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.team-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 20px;
+}
+
+.team-name {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.team-position {
+    color: #f1c40f;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Sección de preguntas frecuentes */
+.faq-section {
+    margin-top: 80px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f9f9f9;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+}
+
+.faq-question.active::after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.faq-answer.show {
+    padding: 20px;
+    max-height: 500px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-page {
+        padding: 60px 15px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

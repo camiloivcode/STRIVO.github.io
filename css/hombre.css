@@ -1,0 +1,146 @@
+/* ===== ESTILOS PARA SECCIÓN HOMBRE CON IMÁGENES 617x460px ===== */
+
+.main-content.hombre {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    min-height: calc(100vh - 150px);
+}
+
+.hombre .page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #000;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.hombre .page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #f1c40f;
+}
+
+/* Contenedor principal de productos */
+.hombre .product-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Tarjeta de producto */
+.hombre .product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.hombre .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor de imagen con relación de aspecto 460:617 (aproximadamente 1:1.34) */
+.hombre .product-image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 134.13%; /* (617/460)*100 para mantener relación de aspecto */
+    position: relative;
+    overflow: hidden;
+}
+
+.hombre .product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hombre .product-item:hover .product-image {
+    transform: scale(1.03);
+}
+
+/* Información del producto */
+.hombre .product-info {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hombre .product-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hombre .product-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+}
+
+/* Badges/etiquetas */
+.hombre .product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #f1c40f;
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hombre .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hombre .page-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .hombre .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hombre .product-list {
+        grid-template-columns: 1fr;
+        max-width: 460px; /* Ancho máximo igual al ancho de la imagen */
+        margin: 0 auto;
+    }
+    
+    .hombre .product-image-container {
+        padding-bottom: 134.13%; /* Mantiene relación de aspecto en móvil */
+    }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRIVO | Carrito de Compras</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<!-- Header (igual que antes) -->
+<header class="main-header">
+    <div class="container">
+        <nav class="main-nav">
+            <!-- Logo más cerca de la esquina -->
+            <a href="index.html" class="logo">
+                <img src="/img/home/logo-strivo.png" alt="STRIVO Logo" class="logo-img">
+            </a>
+            
+            <!-- Barra de búsqueda -->
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar productos..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Menú de navegación -->
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="hombre.html">Hombre</a></li>
+                <li><a href="mujer.html">Mujer</a></li>
+                <li><a href="oferta.html">Ofertas</a></li>
+                <li><a href="acerca.html">Nosotros</a></li>
+            </ul>
+            
+            <!-- Iconos de redes sociales y carrito -->
+            <div class="nav-icons">
+                <a href="https://instagram.com/tucuenta" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/tucuenta" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://pinterest.com/tucuenta" target="_blank" class="social-icon">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="carrito.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            
+            <!-- Menú hamburguesa para móvil -->
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- Página de carrito -->
+    <main class="cart-page">
+
+        <div class="purchase-success" id="purchaseSuccess">
+    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+    <h2>¡Compra Realizada!</h2>
+    <p>Gracias por tu compra. Te enviaremos una confirmación pronto.</p>
+    <a href="index.html" class="shop-btn">Volver al inicio</a>
+</div>
+
+        <div class="cart-container">
+            <!-- Lista de productos -->
+            <div class="cart-items">
+                <h1 class="cart-title">TU CARRITO</h1>
+                
+                <!-- Único producto en el carrito -->
+                <div class="cart-item">
+                    <img src="/img/hombre/producto2.jpg" alt="Camiseta STRIVO" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h3>Camiseta STRIVO Negra</h3>
+                        <p>Talla: M</p>
+                        <p>Color: Negro</p>
+                    </div>
+                    <div class="cart-item-price">$5,000.00</div>
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="remove-item"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            
+            <!-- Resumen del pedido -->
+            <div class="cart-summary">
+                <h2 class="summary-title">RESUMEN DEL PEDIDO</h2>
+                
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$5,000.00</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Envío</span>
+                    <span>Gratis</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Descuento</span>
+                    <span>$0.00</span>
+                </div>
+                
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>$5,000.00</span>
+                </div>
+                
+                <form class="coupon-form">
+                    <input type="text" placeholder="Código promocional" class="coupon-input">
+                    <button type="button" class="coupon-btn">Aplicar</button>
+                </form>
+                
+                <button class="checkout-btn">PROCEDER AL PAGO</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (igual que antes) -->
+    <footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>STRIVO</h3>
+                <p>Nosotros te abrigamos</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="hombre.html">Hombre</a></li>
+                    <li><a href="mujer.html">Mujer</a></li>
+                    <li><a href="oferta.html">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>info@midominio.com</p>
+                <p>+52-1-33-12345678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 STRIVO, STRIVO Colombia Ltda. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const minusBtns = document.querySelectorAll(".quantity-btn.minus");
+    const plusBtns = document.querySelectorAll(".quantity-btn.plus");
+    const quantityInputs = document.querySelectorAll(".quantity-input");
+    const removeBtns = document.querySelectorAll(".remove-item");
+
+    function updateTotal() {
+        const priceElement = document.querySelector(".cart-item-price");
+        const input = document.querySelector(".quantity-input");
+        const totalElement = document.querySelector(".summary-total span:last-child");
+
+        const price = parseFloat(priceElement.textContent.replace(/[^0-9.-]+/g, ""));
+        const quantity = parseInt(input.value);
+        const total = price * quantity;
+
+        totalElement.textContent = `$${total.toLocaleString("es-CO", { minimumFractionDigits: 2 })}`;
+    }
+
+    // Botón menos
+    minusBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const input = btn.nextElementSibling;
+            let value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+                updateTotal();
+            }
+        });
+    });
+
+    // Botón más
+    plusBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const input = btn.previousElementSibling;
+            let value = parseInt(input.value);
+            input.value = value + 1;
+            updateTotal();
+        });
+    });
+
+    // Eliminar producto
+    removeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const item = btn.closest(".cart-item");
+            item.remove();
+
+            const cartItems = document.querySelector(".cart-items");
+            if (cartItems.children.length <= 1) {
+                cartItems.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Tu carrito está vacío.</p>
+                        <a href="index.html" class="shop-btn">Seguir comprando</a>
+                    </div>
+                `;
+
+                document.querySelector(".cart-summary").style.display = "none";
+            }
+        });
+    });
+
+    // Entrada manual en input
+    quantityInputs.forEach(input => {
+        input.addEventListener("input", () => {
+            let value = parseInt(input.value);
+            if (isNaN(value) || value < 1) input.value = 1;
+            updateTotal();
+        });
+    });
+
+    // Inicializa el total
+    updateTotal();
+});
+document.querySelector(".checkout-btn").addEventListener("click", () => {
+    const successPopup = document.getElementById("purchaseSuccess");
+    successPopup.classList.add("show");
+
+    // Opcional: borrar productos del carrito visualmente
+    document.querySelector(".cart-items").innerHTML = "";
+    document.querySelector(".cart-summary").style.display = "none";
+
+    // Opcional: redirigir después de unos segundos
+    // setTimeout(() => {
+    //     window.location.href = "index.html";
+    // }, 5000);
+});
+
+</script>
+</body>
+</html>
